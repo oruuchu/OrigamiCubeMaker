@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OCM 3.4</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="OrigamiCube.js"></script><!-- OrigamiCube -->
+    <script>OrigamiCube.loadLib();</script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header><h1>OrigamiCubeMaker<small>ver.3.4.2</small></h1></header>
+    <main>
+      <div>
+        <form name="OrigamiCubeMaker">
+          <label class="btn" id="flsl">画像を選択orドロップ<input type="file" name="img" multiple id="sel" accept="image/*"><br>
+            <small>6面画像&lpar;6枚&rpar;or地図画像</small></label>
+          <a id="howma" class="btn" href="https://docs.google.com/presentation/d/e/2PACX-1vQF1QIOOFjlPfa2dKoAu8TlQgwIujan5XUbupKs6xmOA0YBveFOxXssmHJYjHJT_Q/pub?start=false&loop=false&delayms=3000" target="_blank" rel="noreferrer noopener">作り方を表示</a>
+          <fieldset id="proc">
+             <span class="bold">反転</span>
+             <label class="ch_btn off"><input type="checkbox" name="rl_rev">左右</label>
+             <label class="ch_btn off"><input type="checkbox" name="ud_rev">上下</label>
+             <label class="ch_btn off"><input type="checkbox" name="cl_rev">白黒</label>
+          </fieldset>
+          <div id="download" style="display:none;">
+            <a id="img" class="btn" draggable target="_blank" rel="noreferrer noopener">画像を開く</a>
+            <select name="pdf_size" id="slbt">
+              <option value="" selected>pdfを作成</option>
+              <option value="a3">A3(7cm)</option>
+              <option value="b4">B4(6cm)</option>
+              <option value="a4">A4(5cm)</option>
+              <option value="b5">B5(4cm)</option>
+              <option value="a5">A5(3cm)</option>
+              <option value="b6">B6(2.5cm)</option>
+              <option value="docx">Word(A4)</option>
+            </select>
+            <datalist id="cols" style="display:none"></datalist>
+          </div>
+          <input type="color" name="color" value="#ffffff" list="cols">
+          <button type="button" name="paste">&#128203;</button>
+        </form>
+      </div><!--
+      --><canvas id="canvas" width="1200" height="1200"></canvas>
+    </main>
+  </body>
+</html>
